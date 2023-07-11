@@ -45,3 +45,100 @@ result = coinFlip === 0 ? 'Heads' : 'Tails';
 console.log('4th Coin Flip: ' + result);
 //-=-=-=-
 }
+
+//-If-Else-If Problems:
+{console.log("\n\n\tIf-Else-If Problems:");
+
+function getRandomNumber(min, max)
+{
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+console.log("\n\t1:\tRead a single digit number and write the number in word.");
+let number = getRandomNumber(0, 9);
+let word;
+
+if (number == "0") word = "Zero";
+else if (number == "1") word = "One";
+else if (number == "2") word = "Two";
+else if (number == "3") word = "Three";
+else if (number == "4") word = "Four";
+else if (number == "5") word = "Five";
+else if (number == "6") word = "Six";
+else if (number == "7") word = "Seven";
+else if (number == "8") word = "Eight";
+else if (number == "9") word = "Nine";
+else word = "Invalid Input!";
+
+console.log("number is: "+number + " So the number in text is: " +word);
+// console.log(word);
+//-=-=-=-
+
+console.log("\n\t2:\tRead a Number and Display the week day (Sunday, Monday,...) -> 1 is Sunday");
+let dayNumber = getRandomNumber(1, 7);
+let day;
+
+if (dayNumber == "1") day = "Sunday";
+else if (dayNumber == "2") day = "Monday";
+else if (dayNumber == "3") day = "Tuesday";
+else if (dayNumber == "4") day = "Wednesday";
+else if (dayNumber == "5") day = "Thursday";
+else if (dayNumber == "6") day = "Friday";
+else if (dayNumber == "7") day = "Saturday";
+else day = "Invalid Input!";
+
+console.log("dayNumber is: "+dayNumber + " So the dayNumber in text is: " +day);
+// console.log(day);
+//-=-=-=-
+
+console.log("\n\t3:\tRead a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...");
+let numbersArray = [1, 10, 100, 1000];
+let index = getRandomNumber(0, numbersArray.length-1);
+/*let*/ number = numbersArray[index];
+/*let*/ word;
+
+if (number == "1") word = "Unit";
+else if (number == "10") word = "Ten";
+else if (number == "100") word = "Hundred";
+else if (number == "1000") word = "Thousand";
+else word = "Invalid Input!";
+
+console.log("number is: "+number + " So the number in text is: " +word);
+//-=-=-=-
+
+console.log("\n\t4:\tEnter 3 Numbers do following arithmetic operation and find the one that is maximum and minimum");
+let a = getRandomNumber(1, 100);
+let b = getRandomNumber(1, 100);
+let c = getRandomNumber(1, 100);
+
+//    - 1.-> a + b * c
+console.log("\n   - a. a + b * c")
+let result1 = a + b * c;
+
+//    - 2.-> a % b + c
+console.log("\n   - b. a % b + c")
+let result2 = a % b + c;
+
+//    - 3.-> c + a / b
+console.log("\n   - c. c + a / b")
+let result3 = c + a / b;
+
+//    - 4.-> a * b + c
+console.log("\n   - c. a * b + c")
+let result4 = a * b + c;
+
+let maxResult = result1;
+if (result2 > maxResult) maxResult = result2;
+if (result3 > maxResult) maxResult = result3;
+if (result4 > maxResult) maxResult = result4;
+
+let minResult = result1;
+if (result2 < minResult) minResult = result2;
+if (result3 < minResult) minResult = result3;
+if (result4 < minResult) minResult = result4;
+
+console.log("Max Result: ", maxResult);
+console.log("Min Result: ", minResult);
+//-=-=-=-
+
+}
