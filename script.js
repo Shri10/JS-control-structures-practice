@@ -288,6 +288,7 @@ function getRandomNumber(min, max)
 {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+
 console.log("\n\t1:\tPowers of 2 less than or equal to 2^n");
 let n = getRandomNumber(1, 10);
 console.log("Powers of 2 less than or equal to 2^" + n , " are:");
@@ -364,4 +365,83 @@ if (n > 1) {
 
 //  ( ͡ᵔ ͜ʖ ͡ᵔ)👌      Author Shriraj Pethe  //console.log("( ͡ᵔ ͜ʖ ͡ᵔ)👌      Author Shriraj Pethe");
 //-=-=-=-
+}
+
+//-While-Loop Problems:
+{console.log("\n\n\tWhile-Loop Problems:");
+
+console.log("\n\t1:\tPowers of 2 table till 256");
+let n = getRandomNumber(1, 8); 
+let i = 0;
+let power = Math.pow(2, i);
+console.log("n is: ", n);
+
+while(power <= Math.pow(2, n) && power <= 256) {
+    console.log(`2 ^ ${i} = ${power}`);
+    i++;
+    power = Math.pow(2, i);
+}
+//-=-=-=-
+
+console.log("\n\t2:\tMagic Number");
+let magicNumber = getRandomNumber(1, 100);
+console.log("The number we though of: ", magicNumber);
+let guess = 50;
+let min = 1;
+let max = 100;
+
+while (guess !== magicNumber) {
+    console.log(`Is your number less than ${guess}?`);
+    if (guess > magicNumber) {
+        max = guess;
+        guess = min + Math.floor((max - min) / 2);
+    } else {
+        min = guess;
+        guess = guess + Math.ceil((max - min) / 2);
+    }
+}
+console.log("Magic number found: ", guess);
+//-=-=-=-
+
+console.log("\n\t3:\tFlip Coin");
+let heads = 0;
+let tails = 0;
+
+while(heads < 11 && tails < 11) {
+    let flip = getRandomNumber(0, 1);
+    if(flip === 0) {
+        console.log("Heads");
+        heads++;
+    } else {
+        console.log("Tails");
+        tails++;
+    }
+}
+
+if(heads === 11) {
+    console.log("->>HEADS WON");
+} else {
+    console.log("->>TAILS WON");
+}
+//-=-=-=-
+
+console.log("\n\t4:\tGambler");
+let cash = 100;
+let goal = 200;
+let wins = 0;
+let bets = 0;
+
+while(cash > 0 && cash < goal) {
+    bets++;
+    let bet = getRandomNumber(0, 1);
+    if(bet === 0) {
+        cash--;
+    } else {
+        cash++;
+        wins++;
+    }
+}
+console.log("Final Cash:" , cash , "Bets:" , bets , "Wins:" , wins);
+//-=-=-=-
+
 }
