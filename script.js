@@ -281,3 +281,87 @@ console.log("Converting ", meter ," Meter to Feet:\t", meterToFeet , " ft");
 //-=-=-=-
 }
 
+//-For-Loop Problems:
+{console.log("\n\n\tFor-Loop Problems:");
+
+function getRandomNumber(min, max)
+{
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+console.log("\n\t1:\tPowers of 2 less than or equal to 2^n");
+let n = getRandomNumber(1, 10);
+console.log("Powers of 2 less than or equal to 2^" + n , " are:");
+for (let i = 0; i <= n; i++) {
+    console.log("2^" + n , " = " , (Math.pow(2, i)));
+}
+//-=-=-=-
+
+console.log("\n\t2:\tNth harmonic number");
+n = getRandomNumber(1, 10);
+let harmonic = 0;
+for (let i = 1; i <= n; i++) {
+    harmonic += 1 / i;
+}
+console.log("The harmonic number of", n ,"is:" , harmonic);
+//-=-=-=-
+
+console.log("\n\t3:\tCheck if a number is prime");
+let number = getRandomNumber(1, 100);
+let isPrime = true;
+for (let i = 2; i <= Math.sqrt(number); i++) {
+    if (number % i === 0) {
+        isPrime = false;
+        break;
+    }
+}
+
+if (isPrime)
+    {console.log(number , "is a prime number.");}
+else
+    {console.log(number , "is not a prime number.");}
+//-=-=-=-
+
+console.log("\n\t4:\tPrint prime numbers in a range");
+let start = getRandomNumber(1, 50);
+let end = getRandomNumber(start, 100);
+console.log("Prime numbers between", start , "and" , end , ":");
+
+for (let number = start; number <= end; number++) {
+    let isPrime = true;
+    for (let i = 2; i <= Math.sqrt(number); i++) {
+        if (number % i === 0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if (isPrime && number > 1) {
+        console.log(number);
+    }
+}
+//-=-=-=-
+
+console.log("\n\t5:\tFactorial of a number");
+n = getRandomNumber(1, 10);
+let factorial = 1;
+for (let i = 2; i <= n; i++) {
+    factorial *= i;
+}
+console.log(n + "! =" , factorial);
+//-=-=-=-
+
+console.log("\n\t6:\tPrime factors of a number");
+n = getRandomNumber(2, 100);
+console.log("Prime factors of", n ,":");
+for (let i = 2; i * i <= n; i++) {
+    while (n % i === 0) {
+        console.log(i);
+        n = n / i;
+    }
+}
+if (n > 1) {
+    console.log(n);
+}
+
+//  ( ͡ᵔ ͜ʖ ͡ᵔ)👌      Author Shriraj Pethe  //console.log("( ͡ᵔ ͜ʖ ͡ᵔ)👌      Author Shriraj Pethe");
+//-=-=-=-
+}
