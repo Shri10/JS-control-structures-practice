@@ -147,3 +147,137 @@ console.log("Min Result: ", minResult);
 
 }
 
+//-Switch-Case Problems:
+{console.log("\n\n\tSwitch-Case Problems:");
+
+function getRandomNumber(min, max)
+{
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+console.log("\n\t1:\tRead a single digit number and write the number in word.");
+/*let*/ number = getRandomNumber(0, 9);
+/*let word;*/
+
+switch(number) {
+    case 0:
+        word = "Zero";
+        break;
+    case 1:
+        word = "One";
+        break;
+    case 2:
+        word = "Two";
+        break;
+    case 3:
+        word = "Three";
+        break;
+    case 4:
+        word = "Four";
+        break;
+    case 5:
+        word = "Five";
+        break;
+    case 6:
+        word = "Six";
+        break;
+    case 7:
+        word = "Seven";
+        break;
+    case 8:
+        word = "Eight";
+        break;
+    case 9:
+        word = "Nine";
+        break;
+    default:
+        word = "Invalid Input!";
+}
+
+console.log("Number is: " , number , " So the number in text is: " , word);
+//-=-=-=-
+
+console.log("\n\t2:\tRead a Number and Display the week day (Sunday, Monday,...) -> 1 is Sunday");
+let dayNumber = getRandomNumber(1, 7);
+let day;
+
+switch(dayNumber) {
+    case 0:
+        day = "Sunday";
+        break;
+    case 1:
+        day = "Monday";
+        break;
+    case 2:
+        day = "Tuesday";
+        break;
+    case 3:
+        day = "Wednesday";
+        break;
+    case 4:
+        day = "Thursday";
+        break;
+    case 5:
+        day = "Friday";
+        break;
+    case 6:
+        day = "Saturday";
+        break;
+    default:
+        day = "Invalid Input!";
+}
+
+console.log("Day-Number is: " , dayNumber , " So the dayNumber in text is: " , day);
+//-=-=-=-
+
+console.log("\n\t3:\tRead a Number 1, 10, 100, 1000, etc and display unit, ten, hundred,...");
+let numbersArray = [1, 10, 100, 1000];
+let index = getRandomNumber(0, numbersArray.length-1);
+/*let*/ number = numbersArray[index];
+/*let*/ word;
+
+switch(number) {
+    case 1:
+        word = "Unit";
+        break;
+    case 10:
+        word = "Ten";
+        break;
+    case 100:
+        word = "Hundred";
+        break;
+    case 1000:
+        word = "Thousand";
+        break;
+    default:
+        word = "Invalid Input!";
+}
+
+console.log("Number is: " , number , " So the number in text is: " , word);
+//-=-=-=-
+
+console.log("\n\t4:\tUnit Conversion of different Length units");
+let feet = getRandomNumber(1, 100);
+let inch = getRandomNumber(1, 100);
+let meter = getRandomNumber(1, 100);
+
+// console.log(`Converting ${feet} ft, ${inch} in, and ${meter} m`);
+
+// Feet to Inch
+let feetToInch = feet * 12;
+console.log("Converting ", feet ," Feet to Inch:\t", feetToInch , " in");
+
+// Feet to Meter 
+let feetToMeter = feet * 0.3048;
+console.log("Converting ", feet ," Feet to Meter:\t", feetToMeter , " m");
+
+// Inch to Feet
+let inchToFeet = inch / 12;
+console.log("Converting ", inch ," Inch to Feet:\t", inchToFeet , " ft");
+
+// Meter to Feet
+let meterToFeet = meter / 0.3048;
+console.log("Converting ", meter ," Meter to Feet:\t", meterToFeet , " ft");
+//-=-=-=-
+}
+
