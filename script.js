@@ -445,3 +445,75 @@ console.log("Final Cash:" , cash , "Bets:" , bets , "Wins:" , wins);
 //-=-=-=-
 
 }
+
+//-Functions Problems:
+{console.log("\tFunctions Problems:");
+
+function getRandomNumber(min, max)
+{
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+console.log("\n\t1:\tTemperature conversion");
+let temp = getRandomNumber(0, 100);
+let choice = getRandomNumber(0, 1); // 0 for Celsius to Fahrenheit, 1 for Fahrenheit to Celsius
+let convertedTemp;
+
+temperatureConversion(temp, choice);
+
+function temperatureConversion(temp, choice)
+{
+    switch(choice) {
+        case 0:
+            convertedTemp = (temp * 9/5) + 32;
+            console.log(temp, "degrees Celsius is" , convertedTemp , "degrees Fahrenheit.");
+            break;
+        case 1:
+            convertedTemp = (temp - 32) * 5/9;
+            console.log(temp, "degrees Celsius is" , convertedTemp , "degrees Fahrenheit.");
+            break;
+    }
+}
+//-=-=-=-
+
+console.log("\n\t2:\tCheck if two numbers are palindromes");
+
+function isPalindrome(number) {
+    return number.toString() === number.toString().split('').reverse().join('');
+}
+
+let num1 = getRandomNumber(10, 100);
+let num2 = getRandomNumber(10, 100);
+
+if (isPalindrome(num1) && isPalindrome(num2)) {
+    console.log(num1 , "and" , num2 , "are both palindromes.");
+} else {
+    console.log(num1 , "and" , num2 , "are not both palindromes.");
+}
+
+//-=-=-=-
+
+console.log("\n\t3:\tCheck if the number and its palindrome are prime");
+
+function isPrime(num) {
+    for(let i = 2; i < num; i++)
+        if(num % i === 0) return false;
+    return num > 1;
+}
+
+function getPalindrome(num) {
+    return parseInt(num.toString().split('').reverse().join(''));
+}
+
+let number = getRandomNumber(10, 100);
+let palindrome = getPalindrome(number);
+
+if (isPrime(number) && isPrime(palindrome)) {
+    console.log(number , "and its palindrome" , palindrome , "are both prime.");
+} else {
+    console.log(number , "and its palindrome" , palindrome , "are not both prime.");
+}
+//-=-=-=-
+
+
+}
