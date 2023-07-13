@@ -33,8 +33,11 @@ $ node script.js
 ```
 
 
-  ( ͡ᵔ ͜ʖ ͡ᵔ)👌      Author Shriraj Pethe  
-  (  ͡ᵔ  ͜ʖ  ͡ᵔ ) 👌      Author Shriraj Pethe  
+  <!-- ( ͡ᵔ ͜ʖ ͡ᵔ)👌      Author Shriraj Pethe  
+  (  ͡ᵔ  ͜ʖ  ͡ᵔ ) 👌      Author Shriraj Pethe   -->
+  (❁´◡`❁) 👌      Author Shriraj Pethe  
+  *^____^* 👌      Author Shriraj Pethe  
+  (～￣▽￣)～ 👌      Author Shriraj Pethe  
 <!-- console.log("( ͡ᵔ ͜ʖ ͡ᵔ)👌      Author Shriraj Pethe"); -->
 
 <!-- # $ git checkout <main> -->
