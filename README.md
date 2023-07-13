@@ -31,7 +31,10 @@ $ git clone https://github.com/Shri10/JS-control-structures-practice.git
 $ cd JS-control-structures-practice
 $ node script.js
 ```
+
+
   ( ͡ᵔ ͜ʖ ͡ᵔ)👌      Author Shriraj Pethe  
+  (  ͡ᵔ  ͜ʖ  ͡ᵔ ) 👌      Author Shriraj Pethe  
 <!-- console.log("( ͡ᵔ ͜ʖ ͡ᵔ)👌      Author Shriraj Pethe"); -->
 
 <!-- # $ git checkout <main> -->
